@@ -16,3 +16,12 @@ exports.create = async (req, res) => {
         res.status(500).json({mensagem: "Erro ao salvar imagem."})
     }
 };
+
+exports.findAll = async (req, res) => {
+    try{
+        const pictures = await Picture.find();
+        res.json(pictures);
+    }catch(error){
+        res.status(500).json({message: "Erro ao buscar imagens."});
+    }
+}
