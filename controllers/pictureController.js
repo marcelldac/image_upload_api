@@ -11,9 +11,9 @@ exports.create = async (req, res) => {
 
         await picture.save();
 
-        res.json({picture, msg: "Imagem salva com sucesso!"})
+        res.json({picture, msg: "Imagem salva com sucesso!"});
     }catch(error){
-        res.status(500).json({mensagem: "Erro ao salvar imagem."})
+        res.status(500).json({mensagem: "Erro ao salvar imagem."});
     }
 };
 
