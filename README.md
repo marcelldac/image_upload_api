@@ -1,14 +1,14 @@
-# Image upload api
+# API de Upload de Imagens
 
-## To execute
+## Executar
 
-- Step 1: Dependencies install:
+- Passo 1: Instalação das dependencias:
 
 ```node
-npm i || npm install
+npm i
 ```
 
-- Step 2: Execute:
+- Passo 2: Executar:
 
 ```node
 npm start
