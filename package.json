@@ -1,5 +1,6 @@
 {
-  "description": "",
+  "name": "api-upload-img",
+  "description": "Image Upload API",
   "scripts": {
     "start": "nodemon server.js"
   },
