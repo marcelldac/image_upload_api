@@ -1,11 +1,11 @@
-const express = require('express')
-const router = express.Router()
+import { Router } from 'express'
+import { upload } from '../config/multer.js'
+import { create, findAll, remove } from '../controllers/pictureController.js'
 
-const upload = require('../config/multer')
-const PictureController = require('../controllers/pictureController')
+const router = Router()
 
-router.post('/', upload.single('file'), PictureController.create)
-router.get('/', PictureController.findAll)
-router.delete('/:id', PictureController.remove)
+router.post('/', upload.single('file'), create)
+router.get('/', findAll)
+router.delete('/:id', remove)
 
-module.exports = router
+export default router

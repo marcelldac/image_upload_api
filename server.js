@@ -1,15 +1,17 @@
-require('dotenv').config()
-require('./db')
+import express from 'express'
+import { config } from 'dotenv'
 
-const express = require('express')
+import db from './db.js'
+import pictureRouter from './routes/picture.js'
+
+config()
+db()
 
 const app = express()
-const port = process.env.PORT || 3000
-
-const pictureRouter = require('./routes/picture')
+const PORT = process.env.PORT || 3000
 
 app.use('/pictures', pictureRouter)
 
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`)
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`)
 })

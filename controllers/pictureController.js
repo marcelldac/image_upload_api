@@ -1,7 +1,7 @@
-const Picture = require('../models/Picture')
-const fs = require('fs')
+import fs from 'node:fs'
+import Picture from '../models/Picture.js'
 
-exports.create = async (req, res) => {
+export const create = async (req, res) => {
   try {
     const { name } = req.body
     const file = req.file
@@ -18,7 +18,7 @@ exports.create = async (req, res) => {
   }
 }
 
-exports.findAll = async (req, res) => {
+export const findAll = async (_, res) => {
   try {
     const pictures = await Picture.find()
     res.json(pictures)
@@ -27,7 +27,7 @@ exports.findAll = async (req, res) => {
   }
 }
 
-exports.remove = async (req, res) => {
+export const remove = async (req, res) => {
   try {
     const picture = await Picture.findByIdAndDelete(req.params.id)
     if (!picture) {

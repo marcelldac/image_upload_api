@@ -1,6 +1,7 @@
 {
   "name": "api-upload-img",
   "description": "Image Upload API",
+  "type": "module",
   "scripts": {
     "start": "node --env-file .env server.js",
     "format": "npx prettier . --write",

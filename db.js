@@ -1,5 +1,7 @@
-const mongoose = require('mongoose')
-require('dotenv').config()
+import mongoose from 'mongoose'
+import { config } from 'dotenv'
+
+config()
 
 mongoose.set('strictQuery', true)
 
@@ -18,4 +20,4 @@ async function main() {
 
 main()
 
-module.exports = main
+export default main
