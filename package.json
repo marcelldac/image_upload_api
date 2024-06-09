@@ -3,7 +3,8 @@
   "description": "Image Upload API",
   "scripts": {
     "start": "node --env-file .env server.js",
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "prepare": "husky"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
