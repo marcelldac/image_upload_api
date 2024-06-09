@@ -16,5 +16,8 @@
     "lint-staged": "^15.2.5",
     "nodemon": "^3.0.1",
     "prettier": "^3.3.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
