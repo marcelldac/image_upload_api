@@ -12,4 +12,4 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: mongo
       MONGO_INITDB_DATABASE: mongo
 volumes:
-  mongodb:
+  mongo:
